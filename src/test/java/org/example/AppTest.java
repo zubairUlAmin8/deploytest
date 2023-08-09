@@ -20,6 +20,10 @@ public class AppTest
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://urdu.arynews.tv/");
+        String tittle = driver.getCurrentUrl();
+        if (!tittle.equalsIgnoreCase("")) {
+            System.out.println("Website has been opened");
+        }
         driver.close();
     }
 }
